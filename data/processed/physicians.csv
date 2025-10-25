@@ -1,0 +1,17 @@
+i_id,name,cFTE,optin,qualification
+1,Ahmed,0.73,1,PCICU_only
+2,Brodsky,0.2,1,Both
+3,Canarie,0.33,0,Both
+4,DelSignore,0.4,0,Both
+5,Deniz,0.55,0,Both
+6,Ebbs,0.2,1,Both
+7,Faustino,0.2,1,Both
+8,Giuliano,0.6,1,Both
+9,Ijaz,0.25,1,Both
+10,Kandil,0.73,1,Both
+11,Karam,0.3,0,Both
+12,Kesman,0.75,1,PCICU_only
+13,Panisello,0.8,0,Both
+14,Pierce,0.5,1,Both
+15,Veten,1,1,PCICU_pred
+16,White,0.7,1,Both
