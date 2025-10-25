@@ -891,7 +891,7 @@ def main():
         
         st.divider()
         
-        st.info("💡 **Tip**: Click 'Generate Heatmap' to create the overview, then 'Refresh' to update with changes.")
+        st.info("💡 **Tip**: Click “Generate Heatmap” to create or refresh the 6-month overview after editing your scores.")
         
         # Generate button
         col1, col2 = st.columns(2)
@@ -932,8 +932,6 @@ def main():
         # Show heatmap if it exists
         if st.session_state.heatmap_fig is not None:
             st.plotly_chart(st.session_state.heatmap_fig, use_container_width=True)
-        else:
-            st.info("👆 Click 'Generate Heatmap' to create the 6-month overview")
     
     # Table editor
     st.divider()
