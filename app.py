@@ -746,7 +746,7 @@ def main():
         col1.metric("Mean", f"{scores.mean():.2f}")
         col2.metric("Median", f"{scores.median():.2f}")
 
-        st.info("📌 **Score Ranges**:\n\n"
+        st.info("📌 **Ranges**:\n\n"
                 "• **Score**: 0 - 10\n\n"
                 "• **Hours**: 4 - 25")
         
