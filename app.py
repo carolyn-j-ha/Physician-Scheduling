@@ -28,7 +28,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-ROOT = "c:\\Users\\1004c\\OneDrive\\바탕 화면\\RA\\Code\\"
+ROOT = "./"
 DATA_DIR = Path(os.path.join(ROOT, "data", "2026_spring", "processed"))
 CACHE_DIR = DATA_DIR / "cache"
 CACHE_DIR.mkdir(exist_ok=True, parents=True)
@@ -69,16 +69,13 @@ SERVICE_COLORS = {
 # TOKEN MANAGEMENT
 # ============================================
 
-def load_tokens(filepath: Path) -> dict:
-    """Load physician tokens from JSON"""
-    import json
-    if filepath.exists():
-        with open(filepath, 'r') as f:
-            return json.load(f)
-    return {}
+def load_tokens() -> dict:
+   """Load physician tokens from Streamlit secrets"""
+   if "tokens" in st.secrets:
+       return dict(st.secrets["tokens"])
+   return {"test": None}
 
-TOKEN_FILE = DATA_DIR / "physician_tokens.json"
-TOKENS = load_tokens(TOKEN_FILE)
+TOKENS = load_tokens()
 
 if not TOKENS:
     TOKENS = {"test": None}
