@@ -1172,12 +1172,14 @@ def main():
                     # Check if score will be constrained
                     if final_score_unconstrained > 10.0:
                         st.warning(f"⚠️ Row {display_idx+1}: Calculated score ({final_score_unconstrained:.2f}) exceeds maximum (10.0). Change not counted.")
-                        should_count = False  # 범위를 벗어나면 counting 안함
-                        final_score = 10.0
+                        final_score = old_score  # ← 기존 값 유지
+                        final_per_hour = old_per_hour_calculated
+                        should_count = False  # ← counting 안됨
                     elif final_score_unconstrained < 0.0:
                         st.warning(f"⚠️ Row {display_idx+1}: Calculated score ({final_score_unconstrained:.2f}) is below minimum (0.0). Change not counted.")
-                        should_count = False  # 범위를 벗어나면 counting 안함
-                        final_score = 0.0
+                        final_score = old_score  # ← 기존 값 유지 (여기도!)
+                        final_per_hour = old_per_hour_calculated  # ← 추가!
+                        should_count = False
                     else:
                         final_score = final_score_unconstrained
                         should_count = True  # 범위 내면 counting
