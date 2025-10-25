@@ -29,7 +29,7 @@ st.set_page_config(
 )
 
 ROOT = "./"
-DATA_DIR = Path(os.path.join(ROOT, "data", "2026_spring", "processed"))
+DATA_DIR = Path(os.path.join(ROOT, "data", "processed"))
 CACHE_DIR = DATA_DIR / "cache"
 CACHE_DIR.mkdir(exist_ok=True, parents=True)
 
