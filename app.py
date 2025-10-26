@@ -925,8 +925,6 @@ def main():
     st.divider()
     st.subheader("✏️ Edit Scores")
     
-    st.info("💡 **Editable Field**: Score (0-10)")
-    
     with st.expander("📊 Table Filters", expanded=True):
         col1, col2, col3 = st.columns(3)
         
