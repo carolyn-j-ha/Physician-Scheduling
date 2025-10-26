@@ -763,6 +763,9 @@ def main():
                 if len(st.session_state.change_log) > 0:
                     log_df = pd.DataFrame(st.session_state.change_log)
                     log_df.to_csv(log_path, index=False)
+                    
+                # 캐시 클리어 추가
+                st.cache_data.clear()
                 
                 st.success(f"✅ Saved!")
                 st.session_state.original_data = st.session_state.data.copy(deep=True)
