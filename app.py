@@ -879,7 +879,7 @@ def main():
         
         st.divider()
         
-        st.info("💡 **Tip**: Click “Generate Heatmap” to create or refresh the 6-month overview after editing your scores.")
+        st.info("💡 **Tip**: Use “Generate Heatmap” to create your overview, and “Refresh Heatmap” to update it after changes.")
         
         # Generate button
         col1, col2 = st.columns(2)
