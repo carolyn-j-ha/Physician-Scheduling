@@ -177,6 +177,7 @@ def load_physician_utility(physician_id: int) -> pd.DataFrame:
     if 'svc' in utilities.columns:
         utilities['svc'] = utilities['svc'].map(lambda x: SERVICE_NAME_MAP.get(x, x))
     
+    return utilities
 
 # ============================================
 # DATA PREPARATION
